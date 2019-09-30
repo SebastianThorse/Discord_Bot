@@ -27,44 +27,36 @@ const playersToObservGame = {
 
 function gamePlaying(game, member) {
     switch (game) {
-        case 'Spotify':{
-            if (member.user.id === '90532204471394304') {
-                member.client.channels.get('501521263882272769').send(member.user.toString() + ' Test Spotify? :upside_down: - Sembi');
-                break;
-            }
-            member.client.channels.get('501521263882272769').send(member.user.toString() + ' Test Spotify? :upside_down:');
-            break;
-        }
         case 'World of Warcraft Classic':{
             if (member.user.id === '161850513850236928' || member.user.id === '307925382383009792') {
-                member.client.channels.get('501521263882272769').send(member.user.toString() + '  Vinner ni? :upside_down:');
+                member.client.channels.get('90532875908161536').send(member.user.toString() + '  Vinner ni? :upside_down:');
                 break;
             }
-            member.client.channels.get('501521263882272769').send(member.user.toString() + ' inte 60 ännu? :kekw:');
+            member.client.channels.get('90532875908161536').send(member.user.toString() + ' inte 60 ännu? :kekw:');
             break;
         }
         case 'Dota 2':{
             if (member.user.id === '161850513850236928' || member.user.id === '307925382383009792') {
-                member.client.channels.get('501521263882272769').send(member.user.toString() + ' O NI SPELER DETTA DOTA..');
+                member.client.channels.get('90532875908161536').send(member.user.toString() + ' O NI SPELER DETTA DOTA..');
                 break;
             }
-            member.client.channels.get('501521263882272769').send(member.user.toString() + ' Dota 2 :WeirdChamp:');
+            member.client.channels.get('90532875908161536').send(member.user.toString() + ' Dota 2 :WeirdChamp:');
             break;
         }
-        case 'Vermintide 2': {
-            member.client.channels.get('501521263882272769').send(member.user.toString() + ' Verminfag :DansGame:');
+        case 'Warhammer: Vermintide 2': {
+            member.client.channels.get('90532875908161536').send(member.user.toString() + ' Vermin :DansGame:');
             break;
         }
         case 'League of Legends' : {
             if (member.user.id === '98571062249275392') {
-                member.client.channels.get('501521263882272769').send(member.user.toString() + ' the king is back! :Pog:');
+                member.client.channels.get('90532875908161536').send(member.user.toString() + ' the king is back! :Pog:');
                 break;
             }
-            member.client.channels.get('501521263882272769').send(member.user.toString() + ' Leauge :LULW:');
+            member.client.channels.get('90532875908161536').send(member.user.toString() + ' Leauge :LULW:');
             break;
         }
         case 'Overwatch' : {
-            member.client.channels.get('501521263882272769').send(member.user.toString() + ' Overwatch! :PogU:');
+            member.client.channels.get('90532875908161536').send(member.user.toString() + ' Overwatch! :PogU:');
             break;
         }
     }
@@ -82,8 +74,8 @@ function onPresenceUpdate(oldMember, newMember) {
 }
 
 function onMessageGote(msg) {
-    if (msg.author.id === '90532204471394304') {
-        msg.reply(' INSERT HERE LUL')
+    if (msg.author.id === '161850513850236928') {
+        msg.reply(' INSERT HERE')
             .then(sent => console.log(`Sent a reply to ${sent.author.username}`))
             .catch(console.error);
     }
@@ -92,7 +84,7 @@ function onMessageGote(msg) {
 async function main() {
     const Discord = require('discord.js');
     const client = new Discord.Client();
-    await client.login('');
+    await client.login('TOKEN-HERE');
     console.log("We logged in");
 
     client.on('ready', () => {
@@ -104,17 +96,5 @@ async function main() {
     client.on('presenceUpdate', onPresenceUpdate);
 
 }
-
-// Get ID from guild
-/*function userId(client) {
-    client.guilds.forEach((guilds, _) => {
-        guilds.members.forEach((member, _) => {
-            if (member.user.username !== 'göte' && member.user.username !== "Saggen" && member.user.username !== 'Sembi' && member.user.username !== 'Mad 👻') {
-                return
-            }
-            console.log(`${member.user.username} have id ${member.id}`);
-        })
-    });
-}*/
 
 main();
