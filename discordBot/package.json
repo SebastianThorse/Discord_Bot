@@ -3,5 +3,25 @@
   "version": "1.0.0",
   "dependencies": {
     "discord.js": "latest"
-  }
+  },
+  "description": "A discord bot made by Sebastian for Boyzindahouse.",
+  "main": "bot.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SebastianThorse/Discord_Bot.git"
+  },
+  "keywords": [
+    "Discord",
+    "Bot"
+  ],
+  "author": "Sebastian Thorsen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SebastianThorse/Discord_Bot/issues"
+  },
+  "homepage": "https://github.com/SebastianThorse/Discord_Bot#readme"
 }

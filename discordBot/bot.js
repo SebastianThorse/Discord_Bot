@@ -92,7 +92,7 @@ function onMessageGote(msg) {
 async function main() {
     const Discord = require('discord.js');
     const client = new Discord.Client();
-    await client.login('NjI3NTY4NjYwMzc0MDkzODI0.XY-35g.B6YEI46V5xmVDgmkjJR3sMB9wjQ');
+    await client.login('');
     console.log("We logged in");
 
     client.on('ready', () => {
